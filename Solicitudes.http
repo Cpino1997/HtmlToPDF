@@ -1,0 +1,32 @@
+### Generacion de pdf tipo 1
+POST http://localhost:8087/api/v1/pdf/generarPDF/1
+Content-Type: application/json
+
+[
+  {
+    "nombres": "Juan Nicolas",
+    "apellidos": " Perez Gomez",
+    "tipo": "Interno",
+    "rut": "10.258.236-3",
+    "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEljN4nGwrKt0l4-u4d6lVwm2Jzh9goTiwO4ysLlY-N1vxzLAd42XMIzqQ30gSszi53U8&usqp=CAU"
+  },
+  {
+    "nombres": "Maria Juana",
+    "apellidos": "De Las Flores",
+    "tipo": "Externo",
+    "rut": "26.359.369-0",
+    "imagen": "https://thumbs.dreamstime.com/b/unknown-male-avatar-profile-image-businessman-vector-unknown-male-avatar-profile-image-businessman-vector-profile-179373829.jpg"
+  }
+]
+
+### Generacion de pdf tipo 2
+POST http://localhost:8087/api/v1/pdf/generarPDF/2
+Content-Type: application/json
+
+{
+  "nombres": "Maria Juana",
+  "apellidos": "De Las Flores",
+  "tipo": "Externo",
+  "rut": "26.359.369-0",
+  "imagen": "https://thumbs.dreamstime.com/b/unknown-male-avatar-profile-image-businessman-vector-unknown-male-avatar-profile-image-businessman-vector-profile-179373829.jpg"
+}

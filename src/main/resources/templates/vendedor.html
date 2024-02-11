@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>Vendedor</title>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                padding: 20px;
+                background-color: #f4f4f4;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+
+            header {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .logo {
+                width: 50px;
+                height: 50px;
+                margin-right: 10px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+                color: #333;
+            }
+
+            .vendedor-container {
+                display: flex;
+                align-items: center;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                padding: 15px;
+                margin-bottom: 20px;
+                background-color: #fff;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                width: 300px;
+            }
+
+            .vendedor-image {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                margin-right: 15px;
+                object-fit: cover;
+            }
+
+            .vendedor-details {
+                flex-grow: 1;
+            }
+
+            .vendedor-name {
+                font-size: 1.2em;
+                font-weight: bold;
+                margin-bottom: 5px;
+                color: #333;
+            }
+
+            .vendedor-info {
+                font-size: 1em;
+                color: #777;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img th:src="@{img/logo.svg}" alt="Logo" class="logo"></img>
+            <h1>Información del Vendedor</h1>
+        </header>
+
+        <div class="vendedor-container">
+            <img class="vendedor-image" th:src="@{${objeto.imagen}}" alt="Imagen" />
+            <div class="vendedor-details">
+                <div class="vendedor-name" th:text="${objeto.nombres + ' ' + objeto.apellidos}"></div>
+                <div class="vendedor-info" th:text="${'Tipo: ' + objeto.tipo}"></div>
+                <div class="vendedor-info" th:text="${'RUT: ' + objeto.rut}"></div>
+            </div>
+        </div>
+    </body>
+</html>

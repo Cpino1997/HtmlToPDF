@@ -15,7 +15,7 @@ Para utilizar este sistema, sigue estos pasos:
 
 2. Añade tu plantilla HTML:
    - Coloca tu archivo HTML en la carpeta resources.
-   - Asegúrate de que la plantilla tenga marcadores Thymeleaf como el [archivo de ejemplo](./src/main/resources/templates/template.html)
+   - Asegúrate de que la plantilla tenga marcadores Thymeleaf como el [archivo de ejemplo 1](./src/main/resources/templates/vendedor.html) o [archivo de ejemplo 2](./src/main/resources/templates/vendedores.html)
 3. Configura el Objeto o Lista de Objetos:
    - Define el objeto o lista de objetos que se utilizará para rellenar la plantilla HTML.
    - Asegúrate de que el objeto coincida con las variables utilizadas en la plantilla.
